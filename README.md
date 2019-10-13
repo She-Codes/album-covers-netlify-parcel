@@ -91,7 +91,11 @@ dist/
 .cache/
 ```
 
-#### :key: Add, commit, and push to github
+#### :key: Add, commit, and then push to github:
+
+`git push -u origin master`
+
+#### :key: Deploy to Netlify using the Netlify browser interface.  Using the build command `yarn build` and publish directory: `dist`
 
 
 
