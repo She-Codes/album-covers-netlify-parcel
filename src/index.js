@@ -17,7 +17,7 @@ if (url.includes('localhost')) {
 
 link = document.createElement('a');
 link.innerText = 'Login';
-link.href = `${url}.netlify/function/callSpotifyApi?redirect_uri=${redirectUri}`;
+link.href = `${url}.netlify/functions/callSpotifyApi?redirect_uri=${redirectUri}`;
 
 document.getElementById('app')
   .appendChild(link);

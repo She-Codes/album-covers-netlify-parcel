@@ -150,7 +150,7 @@ By default it just runs on the functions folder specified in netlify.toml.
 
 `netlify dev # or ntl dev`
 
-Your app will now be accessible at http://localhost:8888 and your function will be accessible at http://localhost:8888/.netlify/function/callSpotifyApi. 
+Your app will now be accessible at http://localhost:8888 and your function will be accessible at http://localhost:8888/.netlify/functions/callSpotifyApi. 
 
 
 
