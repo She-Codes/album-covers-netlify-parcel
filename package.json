@@ -9,7 +9,10 @@
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "postinstall": "netlify-lambda install"
   },
-  "dependencies": {}
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
 }
