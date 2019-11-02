@@ -1,3 +1,5 @@
+import 'bootstrap';
+import renderLoggedOutTemplate from './landing_page/logged_out';
 import './styles.scss';
 
 
@@ -40,25 +42,7 @@ const renderLoggedInTemplate = () => {
 }
 
 
-const renderLoggedOutTemplate = () => {
-  const url = window.location.href;
-  let redirectUri, link;
 
-  if (url.includes('localhost')) {
-    redirectUri = 'http://localhost:8888/';
-  } else {
-    redirectUri = 'https://covers.netlify.com/';
-  }
-
-  // create link - url depends whether local or prod
-  link = document.createElement('a');
-  link.innerText = 'Login';
-  link.href = `${url}.netlify/functions/callSpotifyApi?redirect_uri=${redirectUri}`;
-
-  // render logged out template
-  document.getElementById('app')
-    .appendChild(link);
-}
 
 
 const init = async () => {
