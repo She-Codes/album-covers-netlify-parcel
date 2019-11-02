@@ -35,3 +35,15 @@ body.logged-out {
   }
 }
 
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(4, 300px);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.album {
+  background: black;
+}
+
