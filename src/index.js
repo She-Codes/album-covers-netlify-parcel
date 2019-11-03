@@ -1,6 +1,7 @@
 import 'bootstrap';
 import renderLoggedOutTemplate from './landing_page/logged_out';
 import renderLoggedInTemplate from './logged_in';
+import './search';
 import './styles.scss';
 
 
