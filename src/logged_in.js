@@ -15,7 +15,7 @@ const renderLoggedInTemplate = () => {
 
   <nav class="navbar navbar-dark bg-dark">
     <form class="form-inline">
-      <select name="" id="" class="custom-select">
+      <select name="" id="" class="custom-select form-control">
         <option value="new releases">New Releases</option>
         <option value="my covers">My Covers</option>
       </select>

@@ -6,6 +6,11 @@
   "browserslist": [
     "last 1 Chrome versions"
   ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.23.0"
@@ -16,9 +21,11 @@
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
+    "autoprefixer": "^9.7.1",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "netlify-lambda": "^1.6.3",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.0",
+    "postcss-modules": "^1.4.1"
   }
 }

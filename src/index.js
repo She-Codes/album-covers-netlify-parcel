@@ -1,5 +1,6 @@
 import 'bootstrap';
 import renderLoggedOutTemplate from './landing_page/logged_out';
+import renderLoggedInTemplate from './logged_in';
 import './styles.scss';
 
 
@@ -30,32 +31,24 @@ const setLogin = async () => {
       console.log(response);
       loggedIn = false;
     }
-  // if no hash
+    // if no hash
   } else {
     loggedIn = false;
-  }  
+  }
 }
-
-
-const renderLoggedInTemplate = () => {
-
-}
-
-
-
 
 
 const init = async () => {
   await setLogin();
 
   if (loggedIn) {
-    // show loggedin template
+    renderLoggedInTemplate();
     console.log('logged in');
-    
+
   } else {
     console.log('logged out');
     renderLoggedOutTemplate();
-  }  
+  }
 }
 
 

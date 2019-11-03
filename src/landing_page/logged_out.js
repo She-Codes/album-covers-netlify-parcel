@@ -1,14 +1,8 @@
 const renderLoggedOutTemplate = () => {
-  const url = window.location.href;
-  let redirectUri, link;
+  const url = window.location.href.includes('#') ? window.location.href.split('#')[0] : window.location.href;
+  // redirect URI for Spotify depends whether local or prod
+  const redirectUri = url.includes('localhost') ? 'http://localhost:8888/' : 'https://covers.netlify.com/';
 
-  if (url.includes('localhost')) {
-    redirectUri = 'http://localhost:8888/';
-  } else {
-    redirectUri = 'https://covers.netlify.com/';
-  }
-
-  // create link - url depends whether local or prod
   document.body.classList.add('logged-out');
   document.getElementById('app').innerHTML = `
     <h1 class="text-center">Covers.</h1>
