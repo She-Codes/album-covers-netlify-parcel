@@ -5,10 +5,10 @@ import './search';
 import './styles.scss';
 
 
-let loggedIn;
+let loggedIn, token;
 
 const setLogin = async () => {
-  let url, hashFragment, token, headers, response, json;
+  let url, hashFragment, headers, response, json;
   if (window.location.href.includes('#')) {
     hashFragment = window.location.href.split("#access_token=")[1];
     [token] = hashFragment.split("&token_type=Bearer&expires_in");
@@ -43,7 +43,7 @@ const init = async () => {
   await setLogin();
 
   if (loggedIn) {
-    renderLoggedInTemplate();
+    renderLoggedInTemplate(token);
     console.log('logged in');
 
   } else {

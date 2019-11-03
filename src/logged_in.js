@@ -1,4 +1,4 @@
-const renderLoggedInTemplate = () => {
+const renderLoggedInTemplate = (token) => {
   document.body.classList.remove('logged-out');
 
   document.getElementById('app').innerHTML = `
@@ -7,7 +7,7 @@ const renderLoggedInTemplate = () => {
       Covers
     </a>
     
-    <form id="searchForm" class="form-inline">
+    <form id="searchForm" class="form-inline" data-token="${token}">
       <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>

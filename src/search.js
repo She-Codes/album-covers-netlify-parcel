@@ -13,6 +13,7 @@ const showResults = ({ albums }) => {
 
 const fetchResults = async (form) => {
   const query = form.search.value;
+  const token = form.dataset.token;
   const regex = /&/g;
   let url, trimmedQuery, sanitizedQuery, json;
   // nothing in search box
